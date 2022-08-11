@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: finance-service
+          uri: lb://finance-service
+          predicates:
+            - Path=/api/activeAccounts/**,/api/activeProducts/**,/api/businesses/**,/api/comsumptions/**,/api/deposits/**,/api/holders/**,/api/passiveAccounts/**,/api/passiveProducts/**,/api/payments/**,/api/persons/**,/api/withdrawales/**
