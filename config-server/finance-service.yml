@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      database: test
+      host: localhost
+      port: 27017
+      url: mongodb://localhost/test
+
+server:
+  port: 8082
+  error:
+    include-message: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
