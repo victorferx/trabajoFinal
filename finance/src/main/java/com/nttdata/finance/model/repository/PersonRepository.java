@@ -4,6 +4,9 @@ import com.nttdata.finance.model.document.Person;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 
+/**
+ * Interfaz PersonRepository.
+ */
 public interface PersonRepository extends ReactiveMongoRepository<Person, String> {
-    Mono<Boolean> existsByDni(String dni);
+  Mono<Boolean> existsByDni(String dni);
 }

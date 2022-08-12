@@ -7,12 +7,15 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Entidad ActiveProduct.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "activeProducts")
 public class ActiveProduct {
-    @Id
-    private String id = new ObjectId().toString();
-    private String name;
+  @Id
+  private String id = new ObjectId().toString();
+  private String name;
 }

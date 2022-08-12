@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase HolderServiceImpl.
+ */
 @Service
 public class HolderServiceImpl implements HolderService {
 
@@ -22,7 +25,8 @@ public class HolderServiceImpl implements HolderService {
   @Override
   public Mono<Holder> findById(String id) {
     return holderRepository.findById(id)
-            .switchIfEmpty(Mono.error(new Exception("No existe el representante con código " + id)));
+            .switchIfEmpty(Mono
+                    .error(new Exception("No existe el representante con código " + id)));
   }
 
   @Override

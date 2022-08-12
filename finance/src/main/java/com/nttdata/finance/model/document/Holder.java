@@ -6,12 +6,15 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
+/**
+ * Entidad Holder.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Holder {
-    @Id
-    private String id = new ObjectId().toString();
-    private String idPassiveAccount;
-    private String idCustomer;
+  @Id
+  private String id = new ObjectId().toString();
+  private String idPassiveAccount;
+  private String idCustomer;
 }

@@ -5,6 +5,9 @@ import com.nttdata.finance.model.document.Comsumption;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 
+/**
+ * Interfaz ComsumptionRepository.
+ */
 public interface ComsumptionRepository extends ReactiveMongoRepository<Comsumption, String> {
-    Mono<Boolean> existsByActiveAccount(ActiveAccount activeAccount);
+  Mono<Boolean> existsByActiveAccount(ActiveAccount activeAccount);
 }

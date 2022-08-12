@@ -5,13 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Entidad Business.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "businesses")
 public class Business extends Customer {
 
-    private String ruc;
+  private String ruc;
 
-    private String companyName;
+  private String companyName;
 }

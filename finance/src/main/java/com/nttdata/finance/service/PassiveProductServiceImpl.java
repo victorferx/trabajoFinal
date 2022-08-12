@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase PassiveProductServiceImpl.
+ */
 @Service
 public class PassiveProductServiceImpl implements PassiveProductService {
   @Autowired

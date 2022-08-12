@@ -5,7 +5,12 @@ import com.nttdata.finance.model.document.Customer;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 
+/**
+ * Interfaz ActiveAccountRepository.
+ */
 public interface ActiveAccountRepository extends ReactiveMongoRepository<ActiveAccount, String> {
-    Mono<Boolean> existsByCustomer(Customer customer);
-    Mono<ActiveAccount> findByNumber(String number);
+  Mono<Boolean> existsByCustomer(Customer customer);
+
+  Mono<ActiveAccount> findByNumber(String number);
+
 }

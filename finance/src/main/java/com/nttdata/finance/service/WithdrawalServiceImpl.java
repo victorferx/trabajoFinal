@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase WithdrawalServiceImpl.
+ */
 @Service
 public class WithdrawalServiceImpl implements WithdrawalService {
 
